@@ -1,24 +1,26 @@
 name: flutter_quill_extensions
 description: Embed extensions for flutter_quill including image, video, formula and etc.
+publish_to: 'none'
 version: 10.8.5
-homepage: https://github.com/singerdmx/flutter-quill/tree/master/flutter_quill_extensions/
-repository: https://github.com/singerdmx/flutter-quill/tree/master/flutter_quill_extensions/
-issue_tracker: https://github.com/singerdmx/flutter-quill/issues/
-documentation: https://github.com/singerdmx/flutter-quill/tree/master/flutter_quill_extensions/
 
-topics:
- - ui
- - widgets
- - widget
- - rich-text-editor
+#homepage: https://github.com/singerdmx/flutter-quill/tree/master/flutter_quill_extensions/
+#repository: https://github.com/singerdmx/flutter-quill/tree/master/flutter_quill_extensions/
+#issue_tracker: https://github.com/singerdmx/flutter-quill/issues/
+#documentation: https://github.com/singerdmx/flutter-quill/tree/master/flutter_quill_extensions/
 
-platforms:
-  android:
-  ios:
-  linux:
-  macos:
-  web:
-  windows:
+#topics:
+# - ui
+# - widgets
+# - widget
+# - rich-text-editor
+
+#platforms:
+#  android:
+#  ios:
+#  linux:
+#  macos:
+#  web:
+#  windows:
 
 environment:
   sdk: '>=3.1.6 <4.0.0'

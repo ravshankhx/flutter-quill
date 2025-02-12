@@ -46,13 +46,10 @@ class QuillEditorImageEmbedBuilder extends EmbedBuilder {
       alignment: alignment,
       height: height,
       width: width,
-      assetsPrefix: QuillSharedExtensionsConfigurations.get(context: context)
-          .assetsPrefix,
+      assetsPrefix: QuillSharedExtensionsConfigurations.get(context: context).assetsPrefix,
     );
 
-    final imageSaverService =
-        QuillSharedExtensionsConfigurations.get(context: context)
-            .imageSaverService;
+    final imageSaverService = QuillSharedExtensionsConfigurations.get(context: context).imageSaverService;
     return GestureDetector(
       onTap: () {
         final onImageClicked = configurations.onImageClicked;
@@ -60,20 +57,20 @@ class QuillEditorImageEmbedBuilder extends EmbedBuilder {
           onImageClicked(imageSource);
           return;
         }
-        showDialog(
-          context: context,
-          builder: (_) => FlutterQuillLocalizationsWidget(
-            child: ImageOptionsMenu(
-              controller: controller,
-              configurations: configurations,
-              imageSource: imageSource,
-              imageSize: imageSize,
-              isReadOnly: readOnly,
-              imageSaverService: imageSaverService,
-              imageProvider: imageWidget.image,
-            ),
-          ),
-        );
+        // showDialog(
+        //   context: context,
+        //   builder: (_) => FlutterQuillLocalizationsWidget(
+        //     child: ImageOptionsMenu(
+        //       controller: controller,
+        //       configurations: configurations,
+        //       imageSource: imageSource,
+        //       imageSize: imageSize,
+        //       isReadOnly: readOnly,
+        //       imageSaverService: imageSaverService,
+        //       imageProvider: imageWidget.image,
+        //     ),
+        //   ),
+        // );
       },
       child: Builder(
         builder: (context) {

@@ -44,22 +44,22 @@ class QuillEditorImageEmbedBuilder extends EmbedBuilder {
 
     return GestureDetector(
       onTap: () {
-        final onImageClicked = config.onImageClicked;
-        if (onImageClicked != null) {
-          onImageClicked(imageSource);
-          return;
-        }
-        showDialog(
-          context: context,
-          builder: (_) => ImageOptionsMenu(
-            controller: embedContext.controller,
-            config: config,
-            imageSource: imageSource,
-            imageSize: imageSize,
-            readOnly: embedContext.readOnly,
-            imageProvider: imageWidget.image,
-          ),
-        );
+        // final onImageClicked = config.onImageClicked;
+        // if (onImageClicked != null) {
+        //   onImageClicked(imageSource);
+        //   return;
+        // }
+        // showDialog(
+        //   context: context,
+        //   builder: (_) => ImageOptionsMenu(
+        //     controller: embedContext.controller,
+        //     config: config,
+        //     imageSource: imageSource,
+        //     imageSize: imageSize,
+        //     readOnly: embedContext.readOnly,
+        //     imageProvider: imageWidget.image,
+        //   ),
+        // );
       },
       child: Builder(
         builder: (context) {

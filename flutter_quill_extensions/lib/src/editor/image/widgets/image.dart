@@ -13,8 +13,7 @@ import '../image_embed_types.dart';
 String getImageStyleString(QuillController controller) {
   final String? s = controller
       .getAllSelectionStyles()
-      .firstWhere((s) => s.attributes.containsKey(Attribute.style.key),
-          orElse: Style.new)
+      .firstWhere((s) => s.attributes.containsKey(Attribute.style.key), orElse: Style.new)
       .attributes[Attribute.style.key]
       ?.value;
   return s ?? '';
@@ -50,7 +49,7 @@ ImageProvider getImageProviderByImageSource(
   return FileImage(File(imageSource));
 }
 
-Image getImageWidgetByImageSource(
+Widget getImageWidgetByImageSource(
   String imageSource, {
   required BuildContext context,
   required ImageEmbedBuilderProviderBuilder? imageProviderBuilder,
@@ -79,15 +78,7 @@ String standardizeImageUrl(String url) {
   return url;
 }
 
-const List<String> _imageFileExtensions = [
-  '.jpeg',
-  '.png',
-  '.jpg',
-  '.gif',
-  '.webp',
-  '.tif',
-  '.heic'
-];
+const List<String> _imageFileExtensions = ['.jpeg', '.png', '.jpg', '.gif', '.webp', '.tif', '.heic'];
 
 /// This is a bug of Gallery Saver Package.
 /// It can not save image that's filename does not end with it's file extension
@@ -96,14 +87,13 @@ const List<String> _imageFileExtensions = [
 /// If imageUrl does not end with it's file extension,
 /// file extension is added to image url for saving.
 String appendFileExtensionToImageUrl(String url) {
-  final endsWithImageFileExtension = _imageFileExtensions
-      .firstWhere((s) => url.toLowerCase().endsWith(s), orElse: () => '');
+  final endsWithImageFileExtension =
+      _imageFileExtensions.firstWhere((s) => url.toLowerCase().endsWith(s), orElse: () => '');
   if (endsWithImageFileExtension.isNotEmpty) {
     return url;
   }
 
-  final imageFileExtension = _imageFileExtensions
-      .firstWhere((s) => url.toLowerCase().contains(s), orElse: () => '');
+  final imageFileExtension = _imageFileExtensions.firstWhere((s) => url.toLowerCase().contains(s), orElse: () => '');
 
   return url + imageFileExtension;
 }
